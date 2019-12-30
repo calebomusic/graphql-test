@@ -6,6 +6,7 @@ const express = require('express'),
 const typeDefs = [`
 type Query {
     hello: String
+    goodbye: String
 }
 
 schema {
@@ -16,6 +17,9 @@ const resolvers = {
     Query: {
         hello(root) {
             return "world";
+        },
+        goodbye(root) {
+            return "bye world";
         }
     }
 }
